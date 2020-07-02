@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+apply plugin: 'digital.wup.android-maven-publish'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 22
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+}
+
+group = "com.example.apps"
+version = "1.0"
+
+afterEvaluate {
+publishing {
+    publications {
+        "Release"(MavenPublication) {
+            from components.findByName("androidRelease")
+            groupId "com.example.apps"
+            artifactId "mylib"
+            version "1.0"
+            pom {
+                description = "A lib to demo r8 enum inlining issue"
+                name = "My simple library"
+            }
+        }
+    }
+}
+}

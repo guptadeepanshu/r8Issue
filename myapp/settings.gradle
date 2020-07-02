@@ -1,0 +1,2 @@
+rootProject.name = "R8 Enum Inline"
+include ':app'
