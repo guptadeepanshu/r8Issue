@@ -23,7 +23,7 @@ If the text contains one of the three keywords, it should display a message like
 ## More details:
 The issue started due to https://r8-review.googlesource.com/c/r8/+/40221. The first AGP to include it was 3.6.0. The issue exists in all versions since then.
 
-The `mylib` is compiled with 3.5.3. It is also obfuscated before distribution. Since the above change was not present in 3.5, the enum [MyEnum](mylib/app/src/main/java/com/example/apps/mylib/MyEnum.java) is not inlined in [Api](mylib/app/src/main/java/com/example/apps/mylib/Api.java) class. However, the enum itself is obfuscated. This result is a strange call where the decompiler shows the enum to be of the below form:
+The `mylib` is compiled with 3.5.3. It is also obfuscated before distribution. Since the above change was not present in 3.5, the enum [MyEnum](mylib/app/src/main/java/com/example/apps/mylib/MyEnum.java) is not inlined in [Api](mylib/app/src/main/java/com/example/apps/mylib/Api.java) class. However, the enum itself is obfuscated. This result is a strange class where the decompiler shows the enum to be of the below form:
 
 ```java
 package com.example.mylib;
