@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.apps.myapplication.Api;
+import com.example.apps.mylib.Api;
 
 public class MainActivity extends AppCompatActivity {
 
