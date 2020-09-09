@@ -6,6 +6,7 @@ public enum MyEnum {
     THIRD("this is the third enum value");
 
     private final String field;
+
     MyEnum(String s) {
         field = s;
     }
