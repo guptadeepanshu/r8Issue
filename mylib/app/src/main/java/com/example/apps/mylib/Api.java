@@ -4,7 +4,7 @@ public class Api {
     public String findMessage(String key) {
         if (key == null) {
             return null;
-        }else if (key.contains(MyEnum.FIRST.name())) {
+        } else if (key.contains(MyEnum.FIRST.name())) {
             return MyEnum.FIRST.getMessage();
         } else if (key.contains(MyEnum.SECOND.name())) {
             return MyEnum.SECOND.getMessage();
